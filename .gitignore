@@ -25,8 +25,8 @@ Thumbs.db
 
 # User files of Qt Creator #
 ############################
-.user
+*.user
 
 # Nano temp files #
 ###################
-.swp
+*.swp
