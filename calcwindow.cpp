@@ -111,6 +111,24 @@ void CalcWindow::on_calcDisplay_textChanged(const QString &arg1)
         setDisplayFontSize(50 - (ui->calcDisplay->text().size()));
 }
 
+void CalcWindow::keyPressEvent(QKeyEvent *event)
+{
+    if (!inputComplete && getDisplayValue() != "0" && getDisplayValue().size() > 0)
+        if (event->key() == Qt::Key_Backspace)
+            if (getDisplayValue().size() == 1)
+            {
+                setDisplayValue("0");
+                inputComplete = true;
+            }
+            else
+            {
+                if (getDisplayValue().back() == ".")
+                    inputFloat = false;
+
+                setDisplayValue(getDisplayValue().left(getDisplayValue().size() - 1));
+            }
+}
+
 CalcWindow::ProcessingActions CalcWindow::fromStringToPA(QString str)
 {
     if (str == "+")
@@ -139,6 +157,12 @@ void CalcWindow::on_btnNum_clicked()
     {
         if (getSenderButtonText(sender()) == "0" && getDisplayValue() == "0")
             return;
+
+        if (getDisplayValue() == "0")
+        {
+            setDisplayValue(getSenderButtonText(sender()));
+            return;
+        }
 
         setDisplayValue(getDisplayValue() + getSenderButtonText(sender()));
     }

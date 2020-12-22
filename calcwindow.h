@@ -26,6 +26,7 @@
 #include <QPushButton>
 #include <QString>
 #include <QObject>
+#include <QKeyEvent>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class CalcWindow; }
@@ -52,6 +53,9 @@ private slots:
     void on_btnActions_clicked();
 
     void on_calcDisplay_textChanged(const QString &arg1);
+
+protected:
+    void keyPressEvent(QKeyEvent *event);
 
 private:
     Ui::CalcWindow *ui;
