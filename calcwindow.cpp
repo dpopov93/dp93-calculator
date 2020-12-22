@@ -42,6 +42,9 @@ CalcWindow::CalcWindow(QWidget *parent)
                              ui->btnNum8, ui->btnNum9
                             };
 
+    for (int i = 0; i < (sizeof(btnNumPointer) / sizeof(int*)); i++)
+        this->btnNumPointer[i] = btnNumPointer[i];
+
     void *btnActPointer[] = {ui->btnPlus,ui->btnMinus,
                              ui->btnMulti, ui->btnDiv,
                              ui->btnEqual
@@ -114,6 +117,7 @@ void CalcWindow::on_calcDisplay_textChanged(const QString &arg1)
 void CalcWindow::keyPressEvent(QKeyEvent *event)
 {
     if (!inputComplete && getDisplayValue() != "0" && getDisplayValue().size() > 0)
+    {
         if (event->key() == Qt::Key_Backspace)
             if (getDisplayValue().size() == 1)
             {
@@ -127,6 +131,41 @@ void CalcWindow::keyPressEvent(QKeyEvent *event)
 
                 setDisplayValue(getDisplayValue().left(getDisplayValue().size() - 1));
             }
+    }
+
+    if (event->key() >= 0x30 && event->key() <= 0x39)
+        static_cast<QPushButton*>(btnNumPointer[event->key() - 0x30])->animateClick();
+
+    switch(event->key())
+    {
+    case Qt::Key_Plus:
+        ui->btnPlus->animateClick();
+        break;
+    case Qt::Key_Minus:
+        ui->btnMinus->animateClick();
+        break;
+    case Qt::Key_Asterisk:
+        ui->btnMulti->animateClick();
+        break;
+    case Qt::Key_Slash:
+        ui->btnDiv->animateClick();
+        break;
+    case Qt::Key_Period:
+    case Qt::Key_Comma:
+        ui->btnFloat->animateClick();
+        break;
+    case Qt::Key_Percent:
+        ui->btnPerc->animateClick();
+        break;
+    case Qt::Key_Enter:
+    case Qt::Key_Return:
+    case Qt::Key_Equal:
+        ui->btnEqual->animateClick();
+        break;
+    case Qt::Key_Escape:
+        ui->btnAC->animateClick();
+        break;
+    }
 }
 
 CalcWindow::ProcessingActions CalcWindow::fromStringToPA(QString str)

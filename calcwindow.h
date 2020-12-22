@@ -59,6 +59,7 @@ protected:
 
 private:
     Ui::CalcWindow *ui;
+    void *btnNumPointer[10];
 
     QString getSenderButtonText(QObject *sndr);
     void setDisplayFontSize(int fontSize);
