@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 
     QString lang =  QLocale::languageToString(QLocale::system().language()).left(2).toLower();
 
-    translator.load("lang/dp93-calculator_" + lang + ".ts", a.applicationDirPath());
+    translator.load("lang/dp93-calculator_" + lang + ".qm", a.applicationDirPath());
     a.installTranslator(&translator);
 
     CalcWindow w;
