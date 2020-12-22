@@ -35,6 +35,8 @@ CalcWindow::CalcWindow(QWidget *parent)
                 "QMenu:pressed{background-color:#111111;}");
     displayMenu->clear();
     actCopy = displayMenu->addAction(tr("Copy"));
+    actInsert = displayMenu->addAction(tr("Insert"));
+    actClear = displayMenu->addAction(tr("Clear"));
 
     inputComplete = true;
     inputFloat = false;
@@ -75,6 +77,8 @@ CalcWindow::CalcWindow(QWidget *parent)
     connect(ui->btnPerc, SIGNAL(clicked()), this, SLOT(on_btnPercentage_clicked()));
     connect(ui->btnAC, SIGNAL(clicked()), this, SLOT(on_btnReset_clicked()));
     connect(actCopy,  SIGNAL(triggered()), this, SLOT(on_actionCopy_clicked()));
+    connect(actInsert, SIGNAL(triggered()), this, SLOT(on_actionInsert_clicked()));
+    connect(actClear, SIGNAL(triggered()), this, SLOT(on_btnReset_clicked()));
 }
 
 CalcWindow::~CalcWindow()
@@ -345,4 +349,17 @@ void CalcWindow::on_actionCopy_clicked()
 {
     if (QClipboard* clp = QApplication::clipboard())
         clp->setText(getDisplayValue());
+}
+
+void CalcWindow::on_actionInsert_clicked()
+{
+    QClipboard* clp = QApplication::clipboard();
+
+    if (clp->text().isEmpty() || !QRegExp("\\d*").exactMatch(clp->text()))
+        return;
+
+    if (inputComplete)
+        inputComplete = false;
+
+    setDisplayValue(clp->text());
 }

@@ -56,6 +56,7 @@ private slots:
     void on_btnReset_clicked();
     void on_btnActions_clicked();
     void on_actionCopy_clicked();
+    void on_actionInsert_clicked();
 
     void on_calcDisplay_textChanged(const QString &arg1);
 
@@ -67,6 +68,8 @@ private:
     Ui::CalcWindow *ui;
     QMenu *displayMenu;
     QAction *actCopy;
+    QAction *actInsert;
+    QAction *actClear;
     void *btnNumPointer[10];
 
     QString getSenderButtonText(QObject *sndr);

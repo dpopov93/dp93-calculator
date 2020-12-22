@@ -110,7 +110,17 @@
         <translation>Copy</translation>
     </message>
     <message>
-        <location filename="../calcwindow.cpp" line="309"/>
+        <location filename="../calcwindow.cpp" line="38"/>
+        <source>Insert</source>
+        <translation>Insert</translation>
+    </message>
+    <message>
+        <location filename="../calcwindow.cpp" line="39"/>
+        <source>Clear</source>
+        <translation>Clear</translation>
+    </message>
+    <message>
+        <location filename="../calcwindow.cpp" line="311"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>

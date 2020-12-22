@@ -110,7 +110,17 @@
         <translation>Копировать</translation>
     </message>
     <message>
-        <location filename="../calcwindow.cpp" line="309"/>
+        <location filename="../calcwindow.cpp" line="38"/>
+        <source>Insert</source>
+        <translation>Вставить</translation>
+    </message>
+    <message>
+        <location filename="../calcwindow.cpp" line="39"/>
+        <source>Clear</source>
+        <translation>Очистить</translation>
+    </message>
+    <message>
+        <location filename="../calcwindow.cpp" line="311"/>
         <source>Error</source>
         <translation>Ошибка</translation>
     </message>
