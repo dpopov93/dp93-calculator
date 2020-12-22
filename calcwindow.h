@@ -27,6 +27,10 @@
 #include <QString>
 #include <QObject>
 #include <QKeyEvent>
+#include <QLineEdit>
+#include <QContextMenuEvent>
+#include <QClipboard>
+#include <QMenu>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class CalcWindow; }
@@ -51,14 +55,18 @@ private slots:
     void on_btnPercentage_clicked();
     void on_btnReset_clicked();
     void on_btnActions_clicked();
+    void on_actionCopy_clicked();
 
     void on_calcDisplay_textChanged(const QString &arg1);
 
 protected:
     void keyPressEvent(QKeyEvent *event);
+    void contextMenuEvent(QContextMenuEvent *event);
 
 private:
     Ui::CalcWindow *ui;
+    QMenu *displayMenu;
+    QAction *actCopy;
     void *btnNumPointer[10];
 
     QString getSenderButtonText(QObject *sndr);

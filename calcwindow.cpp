@@ -27,6 +27,14 @@ CalcWindow::CalcWindow(QWidget *parent)
     , ui(new Ui::CalcWindow)
 {
     ui->setupUi(this);
+    ui->calcDisplay->setContextMenuPolicy(Qt::NoContextMenu);
+    displayMenu = ui->calcDisplay->createStandardContextMenu();
+    displayMenu->setStyleSheet(
+                "QMenu{background-color:#252525;color:#ffffff;}"
+                "QMenu:selected{background-color:#444444;}"
+                "QMenu:pressed{background-color:#111111;}");
+    displayMenu->clear();
+    actCopy = displayMenu->addAction(tr("Copy"));
 
     inputComplete = true;
     inputFloat = false;
@@ -66,6 +74,7 @@ CalcWindow::CalcWindow(QWidget *parent)
     connect(ui->btnNeg, SIGNAL(clicked()), this, SLOT(on_btnNegative_clicked()));
     connect(ui->btnPerc, SIGNAL(clicked()), this, SLOT(on_btnPercentage_clicked()));
     connect(ui->btnAC, SIGNAL(clicked()), this, SLOT(on_btnReset_clicked()));
+    connect(actCopy,  SIGNAL(triggered()), this, SLOT(on_actionCopy_clicked()));
 }
 
 CalcWindow::~CalcWindow()
@@ -166,6 +175,11 @@ void CalcWindow::keyPressEvent(QKeyEvent *event)
         ui->btnAC->animateClick();
         break;
     }
+}
+
+void CalcWindow::contextMenuEvent(QContextMenuEvent *event)
+{
+    displayMenu->exec(event->globalPos());
 }
 
 CalcWindow::ProcessingActions CalcWindow::fromStringToPA(QString str)
@@ -325,4 +339,10 @@ void CalcWindow::on_btnActions_clicked()
     {
         equalsPressed = true;
     }
+}
+
+void CalcWindow::on_actionCopy_clicked()
+{
+    if (QClipboard* clp = QApplication::clipboard())
+        clp->setText(getDisplayValue());
 }

@@ -8,8 +8,19 @@ using Qt software development framework, version 5.x and C++.
 * Buttons created in ui and connected in one slot by using array of pointers with loop
 * UI developed in Qt Designer and elements designed by QCC
 * Program uses translations mechanism realised by QTranslator
+* For copying result using QMenu and QClipboard
+* Supported input by keys realised by keyboard events QKeyEvent
 * Icon stores in Qt resource file
 * If allow to resize window then program will be normal resizing by responsive layout
+
+### Keyboard shortcuts
+| Key        | Description                        |
+| ---------- | ---------------------------------- |
+| 0 - 9      | Numeric keys for inputing a number |
+| +, -, *, / | Arifmetic actions                  |
+| , or .     | Floating point                     |
+| = or Enter | Get result                         |
+| Esc        | Reset all calculations             |
 
 ## Thank You!
 Please ⭐️ this repo and share it with others

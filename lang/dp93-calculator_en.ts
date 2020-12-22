@@ -4,108 +4,113 @@
 <context>
     <name>CalcWindow</name>
     <message>
-        <location filename="calcwindow.ui" line="32"/>
+        <location filename="../calcwindow.ui" line="32"/>
         <source>dp93-calculator</source>
         <translation>Calculator</translation>
     </message>
     <message>
-        <location filename="calcwindow.ui" line="67"/>
-        <location filename="calcwindow.ui" line="608"/>
+        <location filename="../calcwindow.ui" line="71"/>
+        <location filename="../calcwindow.ui" line="612"/>
         <source>0</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="calcwindow.ui" line="110"/>
+        <location filename="../calcwindow.ui" line="114"/>
         <source>AC</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="calcwindow.ui" line="140"/>
+        <location filename="../calcwindow.ui" line="144"/>
         <source>+/-</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="calcwindow.ui" line="170"/>
+        <location filename="../calcwindow.ui" line="174"/>
         <source>%</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="calcwindow.ui" line="200"/>
+        <location filename="../calcwindow.ui" line="204"/>
         <source>/</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="calcwindow.ui" line="234"/>
+        <location filename="../calcwindow.ui" line="238"/>
         <source>7</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="calcwindow.ui" line="264"/>
+        <location filename="../calcwindow.ui" line="268"/>
         <source>8</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="calcwindow.ui" line="294"/>
+        <location filename="../calcwindow.ui" line="298"/>
         <source>9</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="calcwindow.ui" line="324"/>
+        <location filename="../calcwindow.ui" line="328"/>
         <source>*</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="calcwindow.ui" line="358"/>
+        <location filename="../calcwindow.ui" line="362"/>
         <source>4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="calcwindow.ui" line="388"/>
+        <location filename="../calcwindow.ui" line="392"/>
         <source>5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="calcwindow.ui" line="418"/>
+        <location filename="../calcwindow.ui" line="422"/>
         <source>6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="calcwindow.ui" line="448"/>
+        <location filename="../calcwindow.ui" line="452"/>
         <source>-</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="calcwindow.ui" line="482"/>
+        <location filename="../calcwindow.ui" line="486"/>
         <source>1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="calcwindow.ui" line="512"/>
+        <location filename="../calcwindow.ui" line="516"/>
         <source>2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="calcwindow.ui" line="542"/>
+        <location filename="../calcwindow.ui" line="546"/>
         <source>3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="calcwindow.ui" line="572"/>
+        <location filename="../calcwindow.ui" line="576"/>
         <source>+</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="calcwindow.ui" line="642"/>
+        <location filename="../calcwindow.ui" line="646"/>
         <source>,</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="calcwindow.ui" line="672"/>
+        <location filename="../calcwindow.ui" line="676"/>
         <source>=</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="calcwindow.cpp" line="212"/>
+        <location filename="../calcwindow.cpp" line="37"/>
+        <source>Copy</source>
+        <translation>Copy</translation>
+    </message>
+    <message>
+        <location filename="../calcwindow.cpp" line="309"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
