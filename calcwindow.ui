@@ -54,12 +54,19 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="mouseTracking">
+           <bool>true</bool>
+          </property>
           <property name="focusPolicy">
            <enum>Qt::NoFocus</enum>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::NoContextMenu</enum>
           </property>
           <property name="styleSheet">
            <string notr="true">QLineEdit {
     background-color: #000000;
+    selection-background-color: #333333;
     color: #ffffff;
     font-size: 50px;
 }</string>
@@ -78,6 +85,9 @@
           </property>
           <property name="alignment">
            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="clearButtonEnabled">
+           <bool>false</bool>
           </property>
          </widget>
         </item>

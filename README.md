@@ -8,7 +8,9 @@ using Qt software development framework, version 5.x and C++.
 * Buttons created in ui and connected in one slot by using array of pointers with loop
 * UI developed in Qt Designer and elements designed by QCC
 * Program uses translations mechanism realised by QTranslator
-* For copying result using QMenu and QClipboard
+* For copying result, pasting and clear value using QMenu and QClipboard
+* Ctrl + C and Ctrl + V for copy and paste result
+* QEvent detecting mouse click on calc display and remove last number
 * Supported input by keys realised by keyboard events QKeyEvent
 * Icon stores in Qt resource file
 * If allow to resize window then program will be normal resizing by responsive layout
@@ -20,7 +22,11 @@ using Qt software development framework, version 5.x and C++.
 | +, -, *, / | Arifmetic actions                  |
 | , or .     | Floating point                     |
 | = or Enter | Get result                         |
+| Backspace  | Remove last number                 |
 | Esc        | Reset all calculations             |
+| Ctrl + C   | Copy result                        |
+| Ctrl + V   | Insert result                      |
+| Ctrl + Q   | Close application                  |
 
 ## Thank You!
 Please ⭐️ this repo and share it with others

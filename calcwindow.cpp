@@ -27,7 +27,7 @@ CalcWindow::CalcWindow(QWidget *parent)
     , ui(new Ui::CalcWindow)
 {
     ui->setupUi(this);
-    ui->calcDisplay->setContextMenuPolicy(Qt::NoContextMenu);
+    ui->calcDisplay->installEventFilter(this);
     displayMenu = ui->calcDisplay->createStandardContextMenu();
     displayMenu->setStyleSheet(
                 "QMenu{background-color:#252525;color:#ffffff;}"
@@ -113,10 +113,19 @@ void CalcWindow::setDisplayFontSize(int fontSize)
                 QString(
                     "QLineEdit {"
                     "    background-color: #000000;"
+                    "    selection-background-color: #333333;"
                     "    color: #ffffff;"
                     "    font-size: %1px;"
                     "}"
                     ).arg(fontSize));
+}
+
+bool CalcWindow::eventFilter(QObject *object, QEvent *event)
+{
+    if(object == ui->calcDisplay && event->type() == QEvent::MouseButtonRelease)
+        clearLastNum();
+
+        return false;
 }
 
 void CalcWindow::on_calcDisplay_textChanged(const QString &arg1)
@@ -129,25 +138,25 @@ void CalcWindow::on_calcDisplay_textChanged(const QString &arg1)
 
 void CalcWindow::keyPressEvent(QKeyEvent *event)
 {
-    if (!inputComplete && getDisplayValue() != "0" && getDisplayValue().size() > 0)
-    {
-        if (event->key() == Qt::Key_Backspace)
-            if (getDisplayValue().size() == 1)
-            {
-                setDisplayValue("0");
-                inputComplete = true;
-            }
-            else
-            {
-                if (getDisplayValue().back() == ".")
-                    inputFloat = false;
-
-                setDisplayValue(getDisplayValue().left(getDisplayValue().size() - 1));
-            }
-    }
+    if (event->key() == Qt::Key_Backspace)
+        clearLastNum();
 
     if (event->key() >= 0x30 && event->key() <= 0x39)
         static_cast<QPushButton*>(btnNumPointer[event->key() - 0x30])->animateClick();
+
+    if (event->modifiers() == Qt::ControlModifier)
+        if (event->key() == Qt::Key_C)
+        {
+            on_actionCopy_clicked();
+            return;
+        }
+        else if (event->key() == Qt::Key_V)
+        {
+            on_actionInsert_clicked();
+            return;
+        }
+        else if (event->key() == Qt::Key_Q)
+            this->close();
 
     switch(event->key())
     {
@@ -362,4 +371,23 @@ void CalcWindow::on_actionInsert_clicked()
         inputComplete = false;
 
     setDisplayValue(clp->text());
+}
+
+void CalcWindow::clearLastNum()
+{
+    if (!inputComplete && getDisplayValue() != "0" && getDisplayValue().size() > 0)
+    {
+        if (getDisplayValue().size() == 1)
+        {
+            setDisplayValue("0");
+            inputComplete = true;
+        }
+        else
+        {
+            if (getDisplayValue().back() == ".")
+                inputFloat = false;
+
+            setDisplayValue(getDisplayValue().left(getDisplayValue().size() - 1));
+        }
+    }
 }

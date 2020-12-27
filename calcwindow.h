@@ -27,6 +27,7 @@
 #include <QString>
 #include <QObject>
 #include <QKeyEvent>
+#include <QEvent>
 #include <QLineEdit>
 #include <QContextMenuEvent>
 #include <QClipboard>
@@ -57,6 +58,7 @@ private slots:
     void on_btnActions_clicked();
     void on_actionCopy_clicked();
     void on_actionInsert_clicked();
+    void clearLastNum();
 
     void on_calcDisplay_textChanged(const QString &arg1);
 
@@ -74,6 +76,7 @@ private:
 
     QString getSenderButtonText(QObject *sndr);
     void setDisplayFontSize(int fontSize);
+    bool eventFilter(QObject *object, QEvent* event);
 
     bool inputComplete;
     bool inputFloat;
