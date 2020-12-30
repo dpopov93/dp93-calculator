@@ -24,6 +24,7 @@
 #include <QApplication>
 #include <QTranslator>
 #include <QLocale>
+#include <QDebug>
 
 
 int main(int argc, char *argv[])
@@ -32,9 +33,21 @@ int main(int argc, char *argv[])
 
     QTranslator translator;
 
-    QString lang =  QLocale::languageToString(QLocale::system().language()).left(2).toLower();
+    switch (QLocale::system().language()) {
+    case QLocale::English:
+        translator.load("lang/dp93-calculator_en.qm", a.applicationDirPath());
+        break;
+    case QLocale::Russian:
+        translator.load("lang/dp93-calculator_ru.qm", a.applicationDirPath());
+        break;
+    case QLocale::Chinese:
+        translator.load("lang/dp93-calculator_cn.qm", a.applicationDirPath());
+        break;
+    default:
+        translator.load("lang/dp93-calculator_en.qm", a.applicationDirPath());
+        break;
+    }
 
-    translator.load("lang/dp93-calculator_" + lang + ".qm", a.applicationDirPath());
     a.installTranslator(&translator);
 
     CalcWindow w;

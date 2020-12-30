@@ -28,22 +28,6 @@ CalcWindow::CalcWindow(QWidget *parent)
 {
     ui->setupUi(this);
     ui->calcDisplay->installEventFilter(this);
-    displayMenu = ui->calcDisplay->createStandardContextMenu();
-    displayMenu->setStyleSheet(
-                "QMenu{background-color:#252525;color:#ffffff;}"
-                "QMenu:selected{background-color:#444444;}"
-                "QMenu:pressed{background-color:#111111;}");
-    displayMenu->clear();
-    actCopy = displayMenu->addAction(tr("Copy"));
-    actInsert = displayMenu->addAction(tr("Insert"));
-    actClear = displayMenu->addAction(tr("Clear"));
-
-    inputComplete = true;
-    inputFloat = false;
-    numInMemory = false;
-    equalsPressed = false;
-    memoryEquals = 0.0;
-    memory = 0.0;
 
     void *btnNumPointer[] = {ui->btnNum0, ui->btnNum1,
                              ui->btnNum2, ui->btnNum3,
@@ -52,16 +36,44 @@ CalcWindow::CalcWindow(QWidget *parent)
                              ui->btnNum8, ui->btnNum9
                             };
 
-    for (int i = 0; i < (sizeof(btnNumPointer) / sizeof(int*)); i++)
-        this->btnNumPointer[i] = btnNumPointer[i];
-
-    void *btnActPointer[] = {ui->btnPlus,ui->btnMinus,
+    void *btnActPointer[] = {ui->btnPlus, ui->btnMinus,
                              ui->btnMulti, ui->btnDiv,
                              ui->btnEqual
                             };
 
+    void *btnTopPointer[] = {ui->btnAC, ui->btnNeg,
+                             ui->btnPerc
+                            };
+
+    displayMenu = ui->calcDisplay->createStandardContextMenu();
+    displayMenu->clear();
+    actCopy = displayMenu->addAction(tr("Copy"));
+    actInsert = displayMenu->addAction(tr("Insert"));
+    actClear = displayMenu->addAction(tr("Clear"));
+    themeMenu = new QMenu(tr("Themes"));
+
+    void *contextMenus[] = {displayMenu, themeMenu};
+
+    thmManager = new ThemeManager("oceanic.dp93ct");
+    thmManager->setUI(ui->body, btnNumPointer, btnActPointer, btnTopPointer, contextMenus,
+                     ui->btnFloat, ui->calcDisplay);
+
+    for (int i = 0; i < thmManager->countThemes(); i++)
+    {
+        themeMenu->addAction(thmManager->getThemeName(i), [this, i] {thmManager->setTheme(thmManager->getFileName(i));});
+    }
+    displayMenu->addMenu(themeMenu);
+
+    inputComplete = true;
+    inputFloat = false;
+    numInMemory = false;
+    equalsPressed = false;
+    memoryEquals = 0.0;
+    memory = 0.0;
+
     for (int i = 0; i < (sizeof(btnNumPointer) / sizeof(int*)); i++)
     {
+        this->btnNumPointer[i] = btnNumPointer[i];
         QPushButton *btnNum = static_cast<QPushButton*>(btnNumPointer[i]);
         connect(btnNum, SIGNAL(clicked()), this, SLOT(on_btnNum_clicked()));
     }
@@ -79,6 +91,9 @@ CalcWindow::CalcWindow(QWidget *parent)
     connect(actCopy,  SIGNAL(triggered()), this, SLOT(on_actionCopy_clicked()));
     connect(actInsert, SIGNAL(triggered()), this, SLOT(on_actionInsert_clicked()));
     connect(actClear, SIGNAL(triggered()), this, SLOT(on_btnReset_clicked()));
+
+    // TODO: Settings manager for storing result and selected theme
+    thmManager->setTheme(thmManager->currentThemeFile());
 }
 
 CalcWindow::~CalcWindow()
@@ -110,14 +125,8 @@ QString CalcWindow::getSenderButtonText(QObject *sndr)
 void CalcWindow::setDisplayFontSize(int fontSize)
 {
     ui->calcDisplay->setStyleSheet(
-                QString(
-                    "QLineEdit {"
-                    "    background-color: #000000;"
-                    "    selection-background-color: #333333;"
-                    "    color: #ffffff;"
-                    "    font-size: %1px;"
-                    "}"
-                    ).arg(fontSize));
+                QString(ui->calcDisplay->styleSheet()
+                    + "QLineEdit {font-size: %1px;}").arg(fontSize));
 }
 
 bool CalcWindow::eventFilter(QObject *object, QEvent *event)

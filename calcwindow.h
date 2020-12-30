@@ -32,6 +32,7 @@
 #include <QContextMenuEvent>
 #include <QClipboard>
 #include <QMenu>
+#include "thememanager.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class CalcWindow; }
@@ -58,6 +59,7 @@ private slots:
     void on_btnActions_clicked();
     void on_actionCopy_clicked();
     void on_actionInsert_clicked();
+    //void on_actionThemeChange_clicked(QString themeName);
     void clearLastNum();
 
     void on_calcDisplay_textChanged(const QString &arg1);
@@ -68,7 +70,9 @@ protected:
 
 private:
     Ui::CalcWindow *ui;
+    ThemeManager *thmManager;
     QMenu *displayMenu;
+    QMenu *themeMenu;
     QAction *actCopy;
     QAction *actInsert;
     QAction *actClear;

@@ -1,0 +1,7 @@
+THEME_NAME="Standard"
+BODY_STYLE="QWidget{background-color:#000000;}"
+CONTEXT_MENU="QMenu{background-color:#252525;color:#ffffff;}QMenu:selected{background-color:#444444;}QMenu:pressed{background-color:#111111;}"
+BUTTON_TOP="QPushButton{background-color:#888888;color:#ffffff;border:none;border-radius:32px;font:30px;}QPushButton:hover{background-color:#B3B3B3;}QPushButton:pressed{background-color:#666666;}"
+BUTTON_CENTRAL="QPushButton{background-color:#555555;color:#ffffff;border:none;border-radius:32px;font:30px;}QPushButton:hover{background-color:#737373;}QPushButton:pressed{background-color:#333333;}"
+BUTTON_SIDE="QPushButton{background-color:#FFC200;color:#ffffff;border:none;border-radius:32px;font:30px;}QPushButton:hover{background-color:#FFD85A;}QPushButton:pressed{background-color:#DBA700;}"
+NUMERIC_DISPLAY="QLineEdit{background-color:#000000;selection-background-color:#333333;color:#ffffff;font-size:50px;}"

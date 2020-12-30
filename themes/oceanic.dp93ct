@@ -1,0 +1,7 @@
+THEME_NAME="Oceanic"
+BODY_STYLE="QWidget{background-color:#212121;}"
+CONTEXT_MENU="QMenu{background-color:#212121;color:#f2f2f2;border:1px solid #4f4f4f;}QMenu:selected{background-color:#292929;}QMenu:pressed{background-color:#191919;}"
+BUTTON_TOP="QPushButton{background-color:#7e7e7e;color:#f2f2f2;border:3px solid #4f4f4f;border-radius:10px;}QPushButton:hover{background-color:#868686;}QPushButton:pressed{background-color:#767676;}"
+BUTTON_CENTRAL="QPushButton{background-color:#7e7e7e;color:#f2f2f2;border:3px solid #4f4f4f;border-radius:10px;}QPushButton:hover{background-color:#868686;}QPushButton:pressed{background-color:#767676;}"
+BUTTON_SIDE="QPushButton{background-color:#5ec6cf;color:#f5f4f2;border:3px solid #508b89;border-radius:10px;}QPushButton:hover{background-color:#66CED7;}QPushButton:pressed{background-color:#56BEC7;}"
+NUMERIC_DISPLAY="QLineEdit{background-color:#cae39f;color:#4a4a48;border: 3px solid #92a178;border-radius:10px;padding-right:10px;}"

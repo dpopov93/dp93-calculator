@@ -36,11 +36,6 @@
     <normaloff>:/icon/icon/icon.svg</normaloff>:/icon/icon/icon.svg</iconset>
   </property>
   <widget class="QWidget" name="body">
-   <property name="styleSheet">
-    <string notr="true">QWidget {
-    background-color: #000000;
-}</string>
-   </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <layout class="QVBoxLayout" name="content">
@@ -54,6 +49,11 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="font">
+           <font>
+            <pointsize>38</pointsize>
+           </font>
+          </property>
           <property name="mouseTracking">
            <bool>true</bool>
           </property>
@@ -62,14 +62,6 @@
           </property>
           <property name="contextMenuPolicy">
            <enum>Qt::NoContextMenu</enum>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QLineEdit {
-    background-color: #000000;
-    selection-background-color: #333333;
-    color: #ffffff;
-    font-size: 50px;
-}</string>
           </property>
           <property name="inputMask">
            <string/>
@@ -103,22 +95,10 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton {
-    background-color: #888888;
-    color: #ffffff;
-    border: none;
-    border-radius: 33px;
-    font: 30px;
-}
-
-QPushButton:hover {
-    background-color: #B3B3B3;
-}
-
-QPushButton:pressed {
-    background-color: #666666;
-}</string>
+          <property name="font">
+           <font>
+            <pointsize>32</pointsize>
+           </font>
           </property>
           <property name="text">
            <string>AC</string>
@@ -133,22 +113,10 @@ QPushButton:pressed {
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton {
-    background-color: #888888;
-    color: #ffffff;
-    border: none;
-    border-radius: 33px;
-    font: 30px;
-}
-
-QPushButton:hover {
-    background-color: #B3B3B3;
-}
-
-QPushButton:pressed {
-    background-color: #666666;
-}</string>
+          <property name="font">
+           <font>
+            <pointsize>32</pointsize>
+           </font>
           </property>
           <property name="text">
            <string>+/-</string>
@@ -163,22 +131,10 @@ QPushButton:pressed {
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton {
-    background-color: #888888;
-    color: #ffffff;
-    border: none;
-    border-radius: 33px;
-    font: 30px;
-}
-
-QPushButton:hover {
-    background-color: #B3B3B3;
-}
-
-QPushButton:pressed {
-    background-color: #666666;
-}</string>
+          <property name="font">
+           <font>
+            <pointsize>32</pointsize>
+           </font>
           </property>
           <property name="text">
            <string>%</string>
@@ -193,22 +149,10 @@ QPushButton:pressed {
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton {
-    background-color: #FFC200;
-    color: #ffffff;
-    border: none;
-    border-radius: 33px;
-    font: 30px;
-}
-
-QPushButton:hover {
-    background-color: #FFD85A;
-}
-
-QPushButton:pressed {
-    background-color: #DBA700;
-}</string>
+          <property name="font">
+           <font>
+            <pointsize>32</pointsize>
+           </font>
           </property>
           <property name="text">
            <string>/</string>
@@ -227,22 +171,10 @@ QPushButton:pressed {
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton {
-    background-color: #555555;
-    color: #ffffff;
-    border: none;
-    border-radius: 33px;
-    font: 30px;
-}
-
-QPushButton:hover {
-    background-color: #737373;
-}
-
-QPushButton:pressed {
-    background-color: #333333;
-}</string>
+          <property name="font">
+           <font>
+            <pointsize>32</pointsize>
+           </font>
           </property>
           <property name="text">
            <string>7</string>
@@ -257,22 +189,10 @@ QPushButton:pressed {
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton {
-    background-color: #555555;
-    color: #ffffff;
-    border: none;
-    border-radius: 33px;
-    font: 30px;
-}
-
-QPushButton:hover {
-    background-color: #737373;
-}
-
-QPushButton:pressed {
-    background-color: #333333;
-}</string>
+          <property name="font">
+           <font>
+            <pointsize>32</pointsize>
+           </font>
           </property>
           <property name="text">
            <string>8</string>
@@ -287,22 +207,10 @@ QPushButton:pressed {
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton {
-    background-color: #555555;
-    color: #ffffff;
-    border: none;
-    border-radius: 33px;
-    font: 30px;
-}
-
-QPushButton:hover {
-    background-color: #737373;
-}
-
-QPushButton:pressed {
-    background-color: #333333;
-}</string>
+          <property name="font">
+           <font>
+            <pointsize>32</pointsize>
+           </font>
           </property>
           <property name="text">
            <string>9</string>
@@ -317,22 +225,10 @@ QPushButton:pressed {
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton {
-    background-color: #FFC200;
-    color: #ffffff;
-    border: none;
-    border-radius: 33px;
-    font: 30px;
-}
-
-QPushButton:hover {
-    background-color: #FFD85A;
-}
-
-QPushButton:pressed {
-    background-color: #DBA700;
-}</string>
+          <property name="font">
+           <font>
+            <pointsize>32</pointsize>
+           </font>
           </property>
           <property name="text">
            <string>*</string>
@@ -351,22 +247,10 @@ QPushButton:pressed {
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton {
-    background-color: #555555;
-    color: #ffffff;
-    border: none;
-    border-radius: 33px;
-    font: 30px;
-}
-
-QPushButton:hover {
-    background-color: #737373;
-}
-
-QPushButton:pressed {
-    background-color: #333333;
-}</string>
+          <property name="font">
+           <font>
+            <pointsize>32</pointsize>
+           </font>
           </property>
           <property name="text">
            <string>4</string>
@@ -381,22 +265,10 @@ QPushButton:pressed {
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton {
-    background-color: #555555;
-    color: #ffffff;
-    border: none;
-    border-radius: 33px;
-    font: 30px;
-}
-
-QPushButton:hover {
-    background-color: #737373;
-}
-
-QPushButton:pressed {
-    background-color: #333333;
-}</string>
+          <property name="font">
+           <font>
+            <pointsize>32</pointsize>
+           </font>
           </property>
           <property name="text">
            <string>5</string>
@@ -411,22 +283,10 @@ QPushButton:pressed {
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton {
-    background-color: #555555;
-    color: #ffffff;
-    border: none;
-    border-radius: 33px;
-    font: 30px;
-}
-
-QPushButton:hover {
-    background-color: #737373;
-}
-
-QPushButton:pressed {
-    background-color: #333333;
-}</string>
+          <property name="font">
+           <font>
+            <pointsize>32</pointsize>
+           </font>
           </property>
           <property name="text">
            <string>6</string>
@@ -441,22 +301,10 @@ QPushButton:pressed {
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton {
-    background-color: #FFC200;
-    color: #ffffff;
-    border: none;
-    border-radius: 33px;
-    font: 30px;
-}
-
-QPushButton:hover {
-    background-color: #FFD85A;
-}
-
-QPushButton:pressed {
-    background-color: #DBA700;
-}</string>
+          <property name="font">
+           <font>
+            <pointsize>32</pointsize>
+           </font>
           </property>
           <property name="text">
            <string>-</string>
@@ -475,22 +323,10 @@ QPushButton:pressed {
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton {
-    background-color: #555555;
-    color: #ffffff;
-    border: none;
-    border-radius: 33px;
-    font: 30px;
-}
-
-QPushButton:hover {
-    background-color: #737373;
-}
-
-QPushButton:pressed {
-    background-color: #333333;
-}</string>
+          <property name="font">
+           <font>
+            <pointsize>32</pointsize>
+           </font>
           </property>
           <property name="text">
            <string>1</string>
@@ -505,22 +341,10 @@ QPushButton:pressed {
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton {
-    background-color: #555555;
-    color: #ffffff;
-    border: none;
-    border-radius: 33px;
-    font: 30px;
-}
-
-QPushButton:hover {
-    background-color: #737373;
-}
-
-QPushButton:pressed {
-    background-color: #333333;
-}</string>
+          <property name="font">
+           <font>
+            <pointsize>32</pointsize>
+           </font>
           </property>
           <property name="text">
            <string>2</string>
@@ -535,22 +359,10 @@ QPushButton:pressed {
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton {
-    background-color: #555555;
-    color: #ffffff;
-    border: none;
-    border-radius: 33px;
-    font: 30px;
-}
-
-QPushButton:hover {
-    background-color: #737373;
-}
-
-QPushButton:pressed {
-    background-color: #333333;
-}</string>
+          <property name="font">
+           <font>
+            <pointsize>32</pointsize>
+           </font>
           </property>
           <property name="text">
            <string>3</string>
@@ -565,22 +377,10 @@ QPushButton:pressed {
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton {
-    background-color: #FFC200;
-    color: #ffffff;
-    border: none;
-    border-radius: 33px;
-    font: 30px;
-}
-
-QPushButton:hover {
-    background-color: #FFD85A;
-}
-
-QPushButton:pressed {
-    background-color: #DBA700;
-}</string>
+          <property name="font">
+           <font>
+            <pointsize>32</pointsize>
+           </font>
           </property>
           <property name="text">
            <string>+</string>
@@ -601,22 +401,10 @@ QPushButton:pressed {
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton {
-    background-color: #555555;
-    color: #ffffff;
-    border: none;
-    border-radius: 32px;
-    font: 30px;
-}
-
-QPushButton:hover {
-    background-color: #737373;
-}
-
-QPushButton:pressed {
-    background-color: #333333;
-}</string>
+            <property name="font">
+             <font>
+              <pointsize>32</pointsize>
+             </font>
             </property>
             <property name="text">
              <string>0</string>
@@ -635,22 +423,10 @@ QPushButton:pressed {
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton {
-    background-color: #555555;
-    color: #ffffff;
-    border: none;
-    border-radius: 32px;
-    font: 30px;
-}
-
-QPushButton:hover {
-    background-color: #737373;
-}
-
-QPushButton:pressed {
-    background-color: #333333;
-}</string>
+            <property name="font">
+             <font>
+              <pointsize>32</pointsize>
+             </font>
             </property>
             <property name="text">
              <string>,</string>
@@ -665,22 +441,10 @@ QPushButton:pressed {
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton {
-    background-color: #FFC200;
-    color: #ffffff;
-    border: none;
-    border-radius: 33px;
-    font: 30px;
-}
-
-QPushButton:hover {
-    background-color: #FFD85A;
-}
-
-QPushButton:pressed {
-    background-color: #DBA700;
-}</string>
+            <property name="font">
+             <font>
+              <pointsize>32</pointsize>
+             </font>
             </property>
             <property name="text">
              <string>=</string>

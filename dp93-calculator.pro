@@ -17,17 +17,22 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    calcwindow.cpp
+    calcwindow.cpp \
+    parameter.cpp \
+    thememanager.cpp
 
 HEADERS += \
-    calcwindow.h
+    calcwindow.h \
+    parameter.h \
+    thememanager.h
 
 FORMS += \
     calcwindow.ui
 
 TRANSLATIONS += \
     lang/dp93-calculator_en.qm \
-    lang/dp93-calculator_ru.qm
+    lang/dp93-calculator_ru.qm \
+    lang/dp93-calculator_cn.qm
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

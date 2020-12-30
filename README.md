@@ -1,6 +1,6 @@
 # dp93-calculator program
-Calculator program, designed like Apple. Developed with
-using Qt software development framework, version 5.x and C++.
+Calculator program, designed like Apple with theme customizing.
+Developed with using Qt software development framework, version 5.x and C++.
 
 [![License GPL](https://img.shields.io/badge/license-GPL-blue.svg)](LICENSE)
 
@@ -8,7 +8,10 @@ using Qt software development framework, version 5.x and C++.
 * Buttons created in ui and connected in one slot by using array of pointers with loop
 * UI developed in Qt Designer and elements designed by QCC
 * Program uses translations mechanism realised by QTranslator
+* Language support for English, Russian and Chinese
 * For copying result, pasting and clear value using QMenu and QClipboard
+* Quick change theme through context menu
+* Parsing UI theme from file
 * Ctrl + C and Ctrl + V for copy and paste result
 * QEvent detecting mouse click on calc display and remove last number
 * Supported input by keys realised by keyboard events QKeyEvent
@@ -31,8 +34,10 @@ using Qt software development framework, version 5.x and C++.
 ## Thank You!
 Please ⭐️ this repo and share it with others
 
-### Screenshot
-![Calculator - screenshot](screenshot/calc.png)
+### Screenshots
+![Calculator - System theme](screenshot/screen_en_system.png)
+![Calculator - Standard theme](screenshot/screen_ru_standard.png)
+![Calculator - Oceanic theme](screenshot/screen_cn_oceanic.png)
 
 ### Requirements 🔧
 * Qt 5.x

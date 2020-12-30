@@ -1,0 +1,7 @@
+THEME_NAME="System"
+BODY_STYLE="QWidget{background-color:#efefef;}"
+CONTEXT_MENU="QMenu{background-color:#ffffff;color:#000000;border:1px solid #959595;}QMenu:selected{background-color:#308cc6;color:#ffffff;border:1px solid #26709e;}QMenu:pressed{background-color:#26709e;color:#ffffff;border:1px solid #26709e;}"
+BUTTON_TOP="QPushButton{background-color:#f8f8f8;color:#000000;border:1px solid #ababab;border-radius:2px;}QPushButton:hover{background-color:#ffffff;}QPushButton:pressed{background-color:#d8d8d8;}"
+BUTTON_CENTRAL="QPushButton{background-color:#f8f8f8;color:#000000;border:1px solid #ababab;border-radius:2px;}QPushButton:hover{background-color:#ffffff;}QPushButton:pressed{background-color:#d8d8d8;}"
+BUTTON_SIDE="QPushButton{background-color:#f8f8f8;color:#000000;border:1px solid #ababab;border-radius:2px;}QPushButton:hover{background-color:#ffffff;}QPushButton:pressed{background-color:#d8d8d8;}"
+NUMERIC_DISPLAY="QLineEdit{background-color:#ffffff;color:#000000;border: 1px solid #ababab;border-radius:2px;padding-right:10px;}"
