@@ -35,9 +35,9 @@ Developed with using Qt software development framework, version 5.x and C++.
 Please ⭐️ this repo and share it with others
 
 ### Screenshots
-![Calculator - System theme](screenshot/screen_en_system.png)
-![Calculator - Standard theme](screenshot/screen_ru_standard.png)
-![Calculator - Oceanic theme](screenshot/screen_cn_oceanic.png)
+System theme                                                  | Standard theme                                                    | Oceanic theme                                                  
+:-------------------------------------------------------------:-------------------------------------------------------------------:-----------------------------------------------------------------:
+![Calculator - System theme](screenshot/screen_en_system.png) | ![Calculator - Standard theme](screenshot/screen_ru_standard.png) | ![Calculator - Oceanic theme](screenshot/screen_cn_oceanic.png)
 
 ### Requirements 🔧
 * Qt 5.x
