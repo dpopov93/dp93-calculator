@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="en_US">
+<TS version="2.1" language="zh_CN">
 <context>
     <name>CalcWindow</name>
     <message>
         <location filename="../calcwindow.ui" line="32"/>
         <source>dp93-calculator</source>
-        <translation>Calculator</translation>
+        <translation>计算器</translation>
     </message>
     <message>
         <location filename="../calcwindow.ui" line="76"/>
@@ -107,27 +107,27 @@
     <message>
         <location filename="../calcwindow.cpp" line="50"/>
         <source>Copy</source>
-        <translation>Copy</translation>
+        <translation>复制</translation>
     </message>
     <message>
         <location filename="../calcwindow.cpp" line="51"/>
         <source>Insert</source>
-        <translation>Insert</translation>
+        <translation>插入</translation>
     </message>
     <message>
         <location filename="../calcwindow.cpp" line="52"/>
         <source>Clear</source>
-        <translation>Clear</translation>
+        <translation>全清</translation>
     </message>
     <message>
         <location filename="../calcwindow.cpp" line="53"/>
         <source>Themes</source>
-        <translation>Themes</translation>
+        <translation>应用程序的主题</translation>
     </message>
     <message>
         <location filename="../calcwindow.cpp" line="330"/>
         <source>Error</source>
-        <translation>Error</translation>
+        <translation>错误：被零除</translation>
     </message>
 </context>
 </TS>
